@@ -26,6 +26,7 @@
 - Maps-Fotos: n/a (Maps-Panel im 720p-Mode zu klein für sauberes Cropping; visuelle Welt komplett aus Nano Banana)
 - Insta-Posts: n/a (skip — Konsistenz besser mit generierter Bildwelt)
 - Zusatz-Assets: assets/about.webp (Goldschmied-Hände mit Pinzette+Diamant), assets/detail-01.webp (Roségold Memoire auf Cream-Seide), assets/detail-02.webp (Trauringpaar dunkler Marmor), assets/texture.webp (warmer Marmor-Overlay)
+- Scroll-Frames: 50 × WebP (assets/scroll/frames-clean/, ~1.5MB total), Source-Video assets/scroll/source.mp4 (Seedance 2.0, 5s, 720p, Roségold-Trauring rotiert + Kamera-Push-In)
 
 ## Build-Stats
 - Build-Zeit: ca. 12m
@@ -33,3 +34,4 @@
 
 ## Updates
 - 2026-04-28: Initial Build
+- 2026-04-28: Scroll-Frame-Animation eingebaut (50 Frames, Seedance 2.0 Video + 851-labs Background-Remover; Roségold-Trauring rotiert beim Scrollen)
