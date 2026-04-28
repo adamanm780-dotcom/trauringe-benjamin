@@ -221,6 +221,37 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
 .reveal.is-in{opacity:1;transform:none}
 
+/* Mobile: horizontale Swipe-Carousels für Fotos + Reviews */
+.swipe-hint{display:none}
+@media(max-width:768px){
+  /* Kollektionen / Bento */
+  .bento{display:flex;grid-template-columns:none;grid-auto-rows:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;gap:14px;padding:4px 4vw 26px;margin:0 -4vw;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .bento::-webkit-scrollbar{display:none}
+  .bento__card,
+  .bento__card.lg,.bento__card.md,.bento__card.sm,.bento__card.tall{flex:0 0 80%;height:380px;grid-column:auto;grid-row:auto;scroll-snap-align:center}
+
+  /* Featured */
+  .featured__grid{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:18px;padding:4px 4vw 20px;margin:0 -4vw;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .featured__grid::-webkit-scrollbar{display:none}
+  .feat{flex:0 0 72%;scroll-snap-align:center}
+  .feat__img{margin-bottom:18px}
+
+  /* Detail-Grid (Atelier-Einblicke) */
+  .detailgrid__grid{display:flex;grid-template-columns:none;grid-auto-rows:auto;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;gap:14px;padding:4px 4vw 22px;margin:0 -4vw;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .detailgrid__grid::-webkit-scrollbar{display:none}
+  .detailgrid__cell,
+  .detailgrid__cell.a,.detailgrid__cell.b,.detailgrid__cell.c,.detailgrid__cell.d,.detailgrid__cell.e,.detailgrid__cell.f,.detailgrid__cell.g{flex:0 0 82%;height:340px;grid-column:auto;grid-row:auto;scroll-snap-align:center}
+
+  /* Reviews / Testimonials */
+  .reviews__grid{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:4px 4vw 22px;margin:0 -4vw;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .reviews__grid::-webkit-scrollbar{display:none}
+  .review{flex:0 0 84%;scroll-snap-align:center;padding:32px 26px}
+
+  /* Swipe-Hinweis */
+  .swipe-hint{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;color:var(--accent);font-size:10px;letter-spacing:.4em;text-transform:uppercase;opacity:.65}
+  .swipe-hint::before,.swipe-hint::after{content:"";display:inline-block;width:24px;height:1px;background:var(--accent);opacity:.5}
+}
+
 @media (prefers-reduced-motion:reduce){
   .hero__media img{animation:none}
   .marquee__track{animation:none}
@@ -355,6 +386,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
         </div>
       </div>
     </div>
+    <div class="swipe-hint" aria-hidden="true">Wischen</div>
   </div>
 </section>
 
@@ -391,6 +423,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
         <p>Komplett nach Ihrer Idee</p>
       </article>
     </div>
+    <div class="swipe-hint" aria-hidden="true">Wischen</div>
   </div>
 </section>
 
@@ -482,6 +515,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
       <div class="detailgrid__cell d reveal"><img src="assets/about.webp" alt="" loading="lazy" /></div>
       <div class="detailgrid__cell e reveal"><img src="assets/hero.webp" alt="" loading="lazy" /></div>
     </div>
+    <div class="swipe-hint" aria-hidden="true">Wischen</div>
   </div>
 </section>
 
@@ -509,6 +543,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
         <div class="author"><strong>Sarah &amp; David</strong> · Frankfurt</div>
       </article>
     </div>
+    <div class="swipe-hint" aria-hidden="true">Wischen</div>
   </div>
 </section>
 
