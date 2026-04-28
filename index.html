@@ -25,7 +25,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;letter-spacing:.01em;overflow-x:hidden;background:var(--bg);color:var(--ivory)}
+body{font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;letter-spacing:.01em;overflow-x:clip;background:var(--bg);color:var(--ivory)}
 section{padding:140px 0;position:relative}
 @media (max-width:768px){section{padding:90px 0}}
 .container{width:min(1320px,92vw);margin:0 auto}
@@ -406,7 +406,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
   <div class="scroll-anim__spacer" aria-hidden="true"></div>
 </section>
 <style>
-.scroll-anim{position:relative;background:var(--bg-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.scroll-anim{position:relative;background:var(--bg-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0;overflow:clip}
 .scroll-anim::before{content:"";position:absolute;inset:0;background-image:url(assets/texture.webp);background-size:cover;background-position:center;opacity:.06;mix-blend-mode:overlay;pointer-events:none}
 .scroll-anim__spacer{height:280vh;pointer-events:none}
 .scroll-anim__sticky{position:sticky;top:0;height:100vh;display:grid;place-items:center;z-index:1}
