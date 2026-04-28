@@ -1,0 +1,13 @@
+node_modules/
+*.json
+!package.json
+hero-raw.png
+hero-4k.png
+maps-*.png
+p1.json
+p2.json
+p3.json
+p4.json
+hero-pred.json
+hero-up.json
+.playwright-mcp/

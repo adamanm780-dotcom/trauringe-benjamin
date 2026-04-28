@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Trauringe Benjamin · Mainz · Goldschmiede & Trauringe seit 2008</title>
+<meta name="description" content="Trauringe Benjamin in der Mainzer Altstadt. Persönliche Beratung, eigene Goldschmiede, Trauring-Konfigurator und Familienatelier. Lotharstraße 15, 55116 Mainz." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="assets/hero.webp" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Italiana&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg-deep:#0F0B07;
+  --bg:#14110E;
+  --bg-raised:#1F1A14;
+  --bg-elevated:#2A2218;
+  --cream:#F4ECDC;
+  --ivory:#ECE0CB;
+  --accent:#C49A5F;
+  --accent-light:#D9B581;
+  --accent-dark:#8E6A38;
+  --muted:#7A6E5D;
+  --line:rgba(196,154,95,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;letter-spacing:.01em;overflow-x:hidden;background:var(--bg);color:var(--ivory)}
+section{padding:140px 0;position:relative}
+@media (max-width:768px){section{padding:90px 0}}
+.container{width:min(1320px,92vw);margin:0 auto}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:.02em}
+.display{font-family:'Italiana',serif;letter-spacing:.08em}
+.overline{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--ivory);line-height:1.12}
+.gold-line{display:inline-flex;align-items:center;gap:14px;color:var(--accent);font-size:11px;letter-spacing:.4em;text-transform:uppercase}
+.gold-line::before,.gold-line::after{content:"";display:inline-block;width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.nav a{font-size:12px;letter-spacing:.28em;text-transform:uppercase;position:relative;padding:10px 0;transition:color .3s ease;color:var(--ivory);text-decoration:none}
+.nav a::after{content:"";position:absolute;left:50%;bottom:4px;transform:translateX(-50%);width:0;height:1px;background:var(--accent);transition:width .4s ease}
+.nav a:hover::after{width:100%}
+
+/* Topbar */
+.topbar{background:#0A0805;color:var(--muted);font-size:11px;letter-spacing:.28em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid rgba(196,154,95,.08)}
+.topbar .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.topbar a{color:var(--ivory);text-decoration:none}
+.topbar a:hover{color:var(--accent)}
+@media(max-width:600px){.topbar{font-size:10px;letter-spacing:.22em}.topbar .container{justify-content:center;text-align:center}}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:rgba(20,17,14,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(196,154,95,.1);padding:18px 0;transition:padding .3s}
+.header .container{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:30px}
+.header .nav{display:flex;gap:34px}
+.header .nav.left{justify-content:flex-end}
+.header .nav.right{justify-content:flex-start}
+.brand{font-family:'Italiana',serif;font-size:26px;letter-spacing:.18em;color:var(--ivory);text-decoration:none;text-align:center}
+.brand span{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.5em;color:var(--accent);margin-top:4px;font-weight:400}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;color:var(--ivory);text-decoration:none;transition:all .3s;background:rgba(196,154,95,.04)}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(196,154,95,.1)}
+@media(max-width:900px){.header .nav{display:none}.header .container{grid-template-columns:auto 1fr auto}.brand{font-size:20px;text-align:left}.icon-btn{width:36px;height:36px}}
+
+/* Hero */
+.hero{position:relative;height:90vh;min-height:640px;max-height:1000px;overflow:hidden;background:var(--bg-deep)}
+.hero__media{position:absolute;inset:0}
+.hero__media img{width:100%;height:100%;object-fit:cover;animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{0%{transform:scale(1)}100%{transform:scale(1.07) translate(-1.2%,-0.8%)}}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,11,7,.45) 0%,rgba(15,11,7,.05) 30%,rgba(15,11,7,.5) 80%,rgba(15,11,7,.85) 100%)}
+.hero__frame{position:absolute;inset:18px;border:1px solid rgba(196,154,95,.32);pointer-events:none;z-index:2}
+.hero__grain{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");mix-blend-mode:overlay;opacity:.08;pointer-events:none;z-index:3}
+.hero__content{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;justify-content:flex-end;padding:60px 0 100px}
+.hero__content .container{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px}
+.hero__overline{color:var(--accent);font-size:11px;letter-spacing:.5em;text-transform:uppercase}
+.hero__title{font-family:'Italiana',serif;font-size:clamp(56px,9vw,128px);line-height:.96;letter-spacing:.05em;color:var(--cream);font-weight:400;margin-bottom:6px}
+.hero__title em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--accent-light);letter-spacing:0;font-weight:400}
+.hero__sub{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2vw,24px);font-style:italic;color:var(--ivory);max-width:640px;line-height:1.5}
+.hero__bar{position:absolute;left:0;right:0;bottom:30px;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.hero__bar .container{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;width:min(1320px,92vw);margin:0 auto}
+.hero__tags{display:flex;gap:14px;flex-wrap:wrap;color:var(--ivory);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:300}
+.hero__tags span{position:relative;padding-right:14px}
+.hero__tags span:not(:last-child)::after{content:"·";position:absolute;right:0;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:14px;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;padding:18px 32px;border:1px solid var(--accent);color:var(--cream);background:rgba(196,154,95,.06);text-decoration:none;transition:all .4s;cursor:pointer;font-weight:400;position:relative;overflow:hidden}
+.btn::before{content:"";position:absolute;inset:0;background:var(--accent);transform:translateY(101%);transition:transform .5s ease}
+.btn:hover::before{transform:translateY(0)}
+.btn span,.btn svg{position:relative;z-index:1;transition:color .35s}
+.btn:hover span,.btn:hover svg{color:var(--bg-deep)}
+.btn--ghost{border-color:rgba(236,224,203,.5);background:transparent}
+.btn--ghost::before{background:var(--ivory)}
+.btn--ghost:hover span,.btn--ghost:hover svg{color:var(--bg-deep)}
+@media(max-width:768px){.hero__content{padding-bottom:130px}.hero__bar{position:relative;bottom:auto;margin-top:-60px;padding:0 0 30px}}
+
+/* Marquee */
+.marquee{background:var(--bg-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0;overflow:hidden;white-space:nowrap;position:relative}
+.marquee__track{display:inline-flex;gap:60px;animation:marq 32s linear infinite;will-change:transform}
+@keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee__track span{font-family:'Italiana',serif;font-size:22px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase}
+.marquee__track i{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ivory);opacity:.55;font-size:22px;letter-spacing:.05em;display:inline-flex;align-items:center}
+.marquee__track i::before{content:"❖";margin-right:60px;color:var(--accent);opacity:.4}
+
+/* Intro */
+.intro{background:var(--bg)}
+.intro__grid{display:grid;grid-template-columns:1fr 1.4fr;gap:120px;align-items:start}
+.intro__label .gold-line{margin-bottom:16px}
+.intro__label .overline{display:block;margin-top:12px;color:var(--muted)}
+.intro__text h2{font-size:clamp(40px,5vw,68px);margin-bottom:34px;letter-spacing:.01em}
+.intro__text h2 em{font-style:italic;color:var(--accent-light);font-family:'Italiana',serif}
+.intro__text p{color:var(--ivory);opacity:.8;font-size:17px;margin-bottom:22px;max-width:640px}
+.intro__cta{display:inline-flex;align-items:center;gap:14px;color:var(--accent);font-size:12px;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;margin-top:14px;border-bottom:1px solid var(--line);padding-bottom:10px;transition:gap .3s,border-color .3s}
+.intro__cta:hover{gap:24px;border-color:var(--accent)}
+@media(max-width:900px){.intro__grid{grid-template-columns:1fr;gap:40px}}
+
+/* Categories — Bento */
+.categories{background:var(--bg-raised);position:relative}
+.categories::before{content:"";position:absolute;inset:0;background-image:url(assets/texture.webp);background-size:cover;background-position:center;opacity:.06;pointer-events:none;mix-blend-mode:overlay}
+.categories__head{text-align:center;margin-bottom:80px}
+.categories__head h2{font-size:clamp(40px,5vw,64px);margin-top:14px}
+.categories__head p{color:var(--muted);max-width:560px;margin:18px auto 0;font-size:16px}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:18px}
+.bento__card{position:relative;overflow:hidden;background:var(--bg-deep);border:1px solid var(--line);transition:transform .6s ease,border-color .4s}
+.bento__card img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease;display:block}
+.bento__card:hover{border-color:var(--accent)}
+.bento__card:hover img{transform:scale(1.06)}
+.bento__card .label{position:absolute;left:24px;bottom:22px;right:24px;color:var(--cream);z-index:2}
+.bento__card .label .num{font-family:'Italiana',serif;font-size:12px;letter-spacing:.4em;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:8px}
+.bento__card .label h3{font-size:24px;color:var(--cream)}
+.bento__card .label p{font-size:13px;color:var(--ivory);opacity:.75;margin-top:6px}
+.bento__card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,11,7,0) 40%,rgba(15,11,7,.85) 100%);z-index:1}
+.bento__card.lg{grid-column:span 2;grid-row:span 3}
+.bento__card.md{grid-column:span 2;grid-row:span 2}
+.bento__card.sm{grid-column:span 1;grid-row:span 2}
+.bento__card.tall{grid-column:span 1;grid-row:span 3}
+@media(max-width:900px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}.bento__card.lg,.bento__card.md{grid-column:span 2;grid-row:span 2}.bento__card.sm,.bento__card.tall{grid-column:span 1;grid-row:span 2}}
+
+/* Featured */
+.featured{background:var(--bg);text-align:center}
+.featured__head h2{font-size:clamp(40px,5vw,64px);margin-top:14px}
+.featured__head p{color:var(--muted);max-width:560px;margin:18px auto 80px;font-size:16px}
+.featured__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.feat{text-align:left}
+.feat__img{aspect-ratio:3/4;overflow:hidden;background:var(--bg-deep);margin-bottom:22px;position:relative;border:1px solid var(--line)}
+.feat__img img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.feat:hover .feat__img img{transform:scale(1.05)}
+.feat__num{font-family:'Italiana',serif;font-size:14px;letter-spacing:.4em;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:10px}
+.feat h3{font-size:26px;margin-bottom:6px}
+.feat p{color:var(--muted);font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+@media(max-width:900px){.featured__grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+
+/* Atelier */
+.atelier{background:var(--bg-deep);position:relative;overflow:hidden}
+.atelier__grid{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
+.atelier__media{position:relative}
+.atelier__media img{width:100%;height:auto;display:block}
+.atelier__media::after{content:"";position:absolute;inset:14px;border:1px solid rgba(196,154,95,.25);pointer-events:none}
+.atelier__caption{position:absolute;left:-40px;bottom:30px;background:var(--bg);padding:18px 26px;color:var(--accent);font-family:'Italiana',serif;font-size:14px;letter-spacing:.4em;text-transform:uppercase;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.atelier__text h2{font-size:clamp(40px,5vw,68px);margin:18px 0 30px;letter-spacing:.01em}
+.atelier__text h2 em{font-style:italic;color:var(--accent-light);font-family:'Italiana',serif}
+.atelier__text p{color:var(--ivory);opacity:.78;font-size:17px;margin-bottom:20px}
+.atelier__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:48px;padding-top:38px;border-top:1px solid var(--line)}
+.atelier__stat .num{font-family:'Italiana',serif;font-size:46px;color:var(--accent);display:block;line-height:1;margin-bottom:8px}
+.atelier__stat .label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:900px){.atelier__grid{grid-template-columns:1fr;gap:50px}.atelier__caption{left:14px;bottom:14px}}
+
+/* Detail Grid */
+.detailgrid{background:var(--bg);background-image:url(assets/texture.webp);background-size:cover;background-attachment:fixed;background-blend-mode:multiply;background-color:var(--bg)}
+.detailgrid__head{text-align:center;margin-bottom:80px}
+.detailgrid__head h2{font-size:clamp(40px,5vw,64px);margin-top:14px}
+.detailgrid__grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:140px;gap:14px}
+.detailgrid__cell{overflow:hidden;background:var(--bg-deep);border:1px solid var(--line)}
+.detailgrid__cell img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease;display:block;filter:contrast(1.05) saturate(.92)}
+.detailgrid__cell:hover img{transform:scale(1.06)}
+.detailgrid__cell.a{grid-column:span 3;grid-row:span 3}
+.detailgrid__cell.b{grid-column:span 3;grid-row:span 2}
+.detailgrid__cell.c{grid-column:span 2;grid-row:span 2}
+.detailgrid__cell.d{grid-column:span 2;grid-row:span 2}
+.detailgrid__cell.e{grid-column:span 2;grid-row:span 2}
+.detailgrid__cell.f{grid-column:span 3;grid-row:span 2}
+.detailgrid__cell.g{grid-column:span 3;grid-row:span 2}
+@media(max-width:900px){.detailgrid{background-attachment:scroll}.detailgrid__grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.detailgrid__cell.a,.detailgrid__cell.b,.detailgrid__cell.c,.detailgrid__cell.d,.detailgrid__cell.e,.detailgrid__cell.f,.detailgrid__cell.g{grid-column:span 2;grid-row:span 2}}
+
+/* Testimonials */
+.reviews{background:var(--bg-raised);text-align:center;position:relative}
+.reviews::before{content:"";position:absolute;inset:0;background-image:url(assets/texture.webp);background-size:cover;opacity:.04;pointer-events:none}
+.reviews__head h2{font-size:clamp(36px,4.4vw,56px);margin-top:14px}
+.reviews__head p{color:var(--muted);max-width:520px;margin:18px auto 70px;font-size:16px}
+.reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left}
+.review{background:var(--bg);border:1px solid var(--line);padding:38px 32px;position:relative}
+.review .stars{color:var(--accent);font-size:14px;letter-spacing:.2em;margin-bottom:18px}
+.review p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;line-height:1.5;color:var(--cream)}
+.review .author{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.review .author strong{color:var(--accent);font-weight:400;font-family:'Italiana',serif;letter-spacing:.32em}
+@media(max-width:900px){.reviews__grid{grid-template-columns:1fr;gap:18px}}
+
+/* Visit */
+.visit{background:var(--bg-deep);position:relative;overflow:hidden}
+.visit::before{content:"";position:absolute;inset:0;background-image:url(assets/texture.webp);background-size:cover;opacity:.05;mix-blend-mode:overlay}
+.visit__grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;position:relative;z-index:1}
+.visit__text h2{font-size:clamp(44px,5.6vw,76px);margin:20px 0 24px;letter-spacing:.01em}
+.visit__text h2 em{font-style:italic;color:var(--accent-light);font-family:'Italiana',serif}
+.visit__text p.lead{color:var(--ivory);opacity:.78;font-size:18px;max-width:520px;margin-bottom:34px}
+.visit__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.contact-info{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:52px;padding-top:40px;border-top:1px solid var(--line)}
+.contact-info dt{color:var(--accent);font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:10px}
+.contact-info dd{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ivory);font-style:italic;line-height:1.7}
+.contact-info dd a{color:var(--ivory);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s}
+.contact-info dd a:hover{border-color:var(--accent)}
+.hours{font-family:'Inter',sans-serif;font-style:normal;font-size:14px;font-weight:300;letter-spacing:.04em;color:var(--ivory);opacity:.85;line-height:2}
+.hours span{color:var(--accent);display:inline-block;width:60px;letter-spacing:.2em;font-size:11px;text-transform:uppercase}
+.visit__map{position:relative;aspect-ratio:1/1.05;background:var(--bg-raised);border:1px solid var(--line);overflow:hidden}
+.visit__map iframe{width:100%;height:100%;border:0;filter:grayscale(1) contrast(.95) brightness(.6) sepia(.25) hue-rotate(-15deg)}
+.visit__map::after{content:"";position:absolute;inset:14px;border:1px solid rgba(196,154,95,.32);pointer-events:none}
+@media(max-width:900px){.visit__grid{grid-template-columns:1fr;gap:50px}.contact-info{grid-template-columns:1fr;gap:24px}}
+
+/* Footer */
+.footer{background:#0A0805;padding:80px 0 40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px;padding-bottom:50px;border-bottom:1px solid rgba(196,154,95,.1)}
+.footer h4{font-family:'Italiana',serif;font-size:14px;letter-spacing:.4em;color:var(--accent);text-transform:uppercase;margin-bottom:20px}
+.footer__brand{font-family:'Italiana',serif;font-size:30px;letter-spacing:.18em;color:var(--ivory);display:block;margin-bottom:16px}
+.footer p,.footer a{color:var(--muted);text-decoration:none;line-height:1.9}
+.footer a:hover{color:var(--accent)}
+.footer__bot{display:flex;justify-content:space-between;align-items:center;padding-top:30px;flex-wrap:wrap;gap:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+@media(max-width:900px){.footer__grid{grid-template-columns:1fr;gap:40px}}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.reveal.is-in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .hero__media img{animation:none}
+  .marquee__track{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <a href="tel:+4961311438233">📞 06131 / 143 82 33</a>
+    <span>Lotharstr. 15 · 55116 Mainz · Mo–Fr 10–18 · Sa 10–16</span>
+    <a href="mailto:info@juwelier-benjamin.eu">✉ info@juwelier-benjamin.eu</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <nav class="nav left">
+      <a href="#kollektion">Kollektionen</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#trauringe">Trauringe</a>
+    </nav>
+    <a href="#" class="brand">BENJAMIN<span>Trauringe · Mainz</span></a>
+    <nav class="nav right">
+      <a href="#besuch">Besuchen</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="https://www.juwelier-benjamin.eu/trauringkonfigurator/" class="icon-btn" aria-label="Trauring-Konfigurator">◈</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="trauringe">
+  <div class="hero__media">
+    <picture>
+      <source srcset="assets/hero.webp" type="image/webp" />
+      <img src="assets/hero.png" alt="Trauring-Paar in Roségold und Platin auf Marmor" loading="eager" fetchpriority="high" />
+    </picture>
+  </div>
+  <div class="hero__grain"></div>
+  <div class="hero__frame"></div>
+  <div class="hero__content">
+    <div class="container">
+      <div class="hero__overline">Familienatelier · seit 2008 in Mainz</div>
+      <h1 class="hero__title">Zwei Ringe.<br/><em>Eine Geschichte.</em></h1>
+      <p class="hero__sub">Trauringe, die Ihr Versprechen tragen — gemeinsam entworfen, in unserer eigenen Goldschmiede in der Mainzer Altstadt gefertigt.</p>
+    </div>
+  </div>
+  <div class="hero__bar">
+    <div class="container">
+      <div class="hero__tags">
+        <span>750er Gold</span>
+        <span>Platin</span>
+        <span>Roségold</span>
+        <span>Diamant</span>
+      </div>
+      <a href="#besuch" class="btn"><span>Beratung anfragen</span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7h12m-5-5l5 5-5 5"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>750er Gelbgold</span><i></i>
+    <span>Platin 950</span><i></i>
+    <span>Roségold</span><i></i>
+    <span>Diamantbesatz</span><i></i>
+    <span>Memoire-Ring</span><i></i>
+    <span>Eigene Goldschmiede</span><i></i>
+    <span>750er Gelbgold</span><i></i>
+    <span>Platin 950</span><i></i>
+    <span>Roségold</span><i></i>
+    <span>Diamantbesatz</span><i></i>
+    <span>Memoire-Ring</span><i></i>
+    <span>Eigene Goldschmiede</span><i></i>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="container">
+    <div class="intro__grid">
+      <div class="intro__label reveal">
+        <div class="gold-line">Willkommen</div>
+        <div class="overline">I · Atelier Benjamin</div>
+      </div>
+      <div class="intro__text reveal">
+        <h2>Ein Trauring ist mehr als ein Ring — er ist ein <em>Versprechen</em>, das man jeden Tag trägt.</h2>
+        <p>Seit 2008 entwerfen und fertigen wir in der Mainzer Lotharstraße Trauringe, die genauso einzigartig sind wie die Paare, die sie tragen. Familie Benjamin — Aydin, Binno und Daniyel — empfängt Sie persönlich in einem Atelier, das gleichzeitig Werkstatt und Wohnzimmer ist.</p>
+        <p>Vom ersten Skizzenstrich bis zum letzten Polier-Schliff entsteht jeder Ring in unserer eigenen Goldschmiede. Sie wählen Material, Profil, Oberfläche und Steine — wir setzen alles in eines um, das Sie ein Leben lang begleitet.</p>
+        <a href="#kollektion" class="intro__cta">Unsere Trauringe entdecken <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7h12m-5-5l5 5-5 5"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="categories" id="kollektion">
+  <div class="container">
+    <div class="categories__head reveal">
+      <div class="gold-line">Kollektionen</div>
+      <h2 class="serif">Vier Welten, ein <em style="font-style:italic;color:var(--accent-light);font-family:'Italiana',serif">Versprechen</em></h2>
+      <p>Von zeitlos klassisch bis modern minimalistisch — finden Sie das Profil, das zu Ihnen beiden passt.</p>
+    </div>
+    <div class="bento">
+      <div class="bento__card lg reveal">
+        <img src="assets/hero.webp" alt="Klassische Trauringe" loading="lazy" />
+        <div class="label">
+          <span class="num">I · Klassik</span>
+          <h3 class="serif">Zeitlose Profile</h3>
+          <p>Halbrund, gewölbt, klassisch matt oder hochglanzpoliert.</p>
+        </div>
+      </div>
+      <div class="bento__card md reveal">
+        <img src="assets/detail-02.webp" alt="Roségold-Trauringe" loading="lazy" />
+        <div class="label">
+          <span class="num">II · Roségold</span>
+          <h3 class="serif">Warm & modern</h3>
+        </div>
+      </div>
+      <div class="bento__card sm reveal">
+        <img src="assets/detail-01.webp" alt="Diamant-Memoire" loading="lazy" />
+        <div class="label">
+          <span class="num">III · Memoire</span>
+          <h3 class="serif">Mit Diamantbesatz</h3>
+        </div>
+      </div>
+      <div class="bento__card sm reveal">
+        <img src="assets/about.webp" alt="Maßanfertigung" loading="lazy" />
+        <div class="label">
+          <span class="num">IV · Atelier</span>
+          <h3 class="serif">Maßanfertigung</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <div class="featured__head reveal">
+      <div class="gold-line">Signature</div>
+      <h2 class="serif">Vier ausgewählte <em style="font-style:italic;color:var(--accent-light);font-family:'Italiana',serif">Lieblinge</em></h2>
+      <p>Eine kleine Auswahl unserer Atelier-Stücke — jedes weiterführend in viele individuelle Varianten.</p>
+    </div>
+    <div class="featured__grid">
+      <article class="feat reveal">
+        <div class="feat__img"><img src="assets/hero.webp" alt="Memoire Roségold" loading="lazy" /></div>
+        <span class="feat__num">I</span>
+        <h3 class="serif">Memoire Roségold</h3>
+        <p>750er · Brillantbesatz</p>
+      </article>
+      <article class="feat reveal">
+        <div class="feat__img"><img src="assets/detail-01.webp" alt="Eternity Champagner" loading="lazy" /></div>
+        <span class="feat__num">II</span>
+        <h3 class="serif">Eternity</h3>
+        <p>Roségold · Baguette-Cut</p>
+      </article>
+      <article class="feat reveal">
+        <div class="feat__img"><img src="assets/detail-02.webp" alt="Klassik Bicolor" loading="lazy" /></div>
+        <span class="feat__num">III</span>
+        <h3 class="serif">Klassik Bicolor</h3>
+        <p>Roségold + Weißgold</p>
+      </article>
+      <article class="feat reveal">
+        <div class="feat__img"><img src="assets/about.webp" alt="Maßanfertigung" loading="lazy" /></div>
+        <span class="feat__num">IV</span>
+        <h3 class="serif">Atelier Custom</h3>
+        <p>Komplett nach Ihrer Idee</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="container">
+    <div class="atelier__grid">
+      <div class="atelier__media reveal">
+        <picture>
+          <source srcset="assets/about.webp" type="image/webp" />
+          <img src="assets/about.png" alt="Goldschmiede Atelier Benjamin Mainz" loading="lazy" />
+        </picture>
+        <div class="atelier__caption">Familie Benjamin · seit 2008</div>
+      </div>
+      <div class="atelier__text reveal">
+        <div class="gold-line">Atelier &amp; Werkstatt</div>
+        <h2>In unserer eigenen Goldschmiede entstehen Ringe, die <em>ein Leben lang</em> halten.</h2>
+        <p>Wir glauben, dass ein Trauring nicht nur ein Schmuckstück ist, sondern eine Geschichte, die mit jedem Tag länger wird. Deshalb sehen wir unsere Aufgabe nicht in Massenproduktion — sondern darin, jedes Paar ein Stück seiner Geschichte gestalten zu lassen.</p>
+        <p>Aydin, Binno und Daniyel Benjamin führen das Atelier in zweiter Generation. Was Martin Benjamin 2008 in der Lotharstraße gegründet hat, ist heute ein Mainzer Familienbetrieb, der Brautpaare aus dem ganzen Rhein-Main-Gebiet empfängt.</p>
+        <div class="atelier__stats">
+          <div class="atelier__stat"><span class="num">2008</span><span class="label">Gegründet</span></div>
+          <div class="atelier__stat"><span class="num">4.7★</span><span class="label">Google Rating</span></div>
+          <div class="atelier__stat"><span class="num">2</span><span class="label">Standorte</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="detailgrid">
+  <div class="container">
+    <div class="detailgrid__head reveal">
+      <div class="gold-line">Atelier-Einblicke</div>
+      <h2 class="serif">Materialien, Hände, <em style="font-style:italic;color:var(--accent-light);font-family:'Italiana',serif">Detail</em></h2>
+    </div>
+    <div class="detailgrid__grid">
+      <div class="detailgrid__cell a reveal"><img src="assets/hero.webp" alt="" loading="lazy" /></div>
+      <div class="detailgrid__cell b reveal"><img src="assets/detail-02.webp" alt="" loading="lazy" /></div>
+      <div class="detailgrid__cell c reveal"><img src="assets/detail-01.webp" alt="" loading="lazy" /></div>
+      <div class="detailgrid__cell d reveal"><img src="assets/about.webp" alt="" loading="lazy" /></div>
+      <div class="detailgrid__cell e reveal"><img src="assets/hero.webp" alt="" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="reviews__head reveal">
+      <div class="gold-line">Was Paare sagen</div>
+      <h2 class="serif">4.7★ auf Google · 15+ Bewertungen</h2>
+      <p>Über 15 Jahre Trauringe — und die schönsten Stimmen kommen immer von den Paaren selbst.</p>
+    </div>
+    <div class="reviews__grid">
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Wir wurden von der ersten Minute an wie Familie behandelt. Aydin hat sich Zeit genommen, uns alles erklärt — am Ende hatten wir genau die Ringe, die wir uns vorgestellt hatten. Sehr empfehlenswert."</p>
+        <div class="author"><strong>Lisa &amp; Markus</strong> · Mainz</div>
+      </article>
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Beste Beratung, faire Preise und eine wunderschöne Auswahl. Die Roségold-Memoire-Ringe sind ein Traum geworden. Vielen Dank an das gesamte Benjamin-Team!"</p>
+        <div class="author"><strong>Jana &amp; Tobias</strong> · Wiesbaden</div>
+      </article>
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Familienbetrieb mit Herz und Handwerk. Wir waren bei mehreren Juwelieren, hier haben wir uns sofort wohlgefühlt. Die Maßanfertigung war jeden Cent wert."</p>
+        <div class="author"><strong>Sarah &amp; David</strong> · Frankfurt</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="besuch">
+  <div class="container">
+    <div class="visit__grid">
+      <div class="visit__text reveal">
+        <div class="gold-line">Besuch im Atelier</div>
+        <h2>Lassen Sie uns gemeinsam Ihre <em>Trauringe</em> entwerfen.</h2>
+        <p class="lead">Termin telefonisch oder per E-Mail — wir nehmen uns die Zeit, die Sie brauchen, um die richtige Wahl zu treffen.</p>
+        <div class="visit__cta">
+          <a href="tel:+4961311438233" class="btn"><span>06131 / 143 82 33</span></a>
+          <a href="mailto:info@juwelier-benjamin.eu" class="btn btn--ghost"><span>E-Mail schreiben</span></a>
+        </div>
+        <dl class="contact-info">
+          <div>
+            <dt>Adresse</dt>
+            <dd><a href="https://www.google.com/maps/place/Trauringe+Benjamin/@50.0017034,8.2665078,17z" target="_blank" rel="noreferrer">Lotharstr. 15<br/>55116 Mainz</a></dd>
+          </div>
+          <div>
+            <dt>Öffnungszeiten</dt>
+            <dd class="hours">
+              <span>Mo–Fr</span> 10:00 – 18:00<br/>
+              <span>Sa</span> 10:00 – 16:00<br/>
+              <span>So</span> Geschlossen
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <div class="visit__map reveal">
+        <iframe src="https://www.google.com/maps?q=Lotharstr.+15,+55116+Mainz&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Trauringe Benjamin in Mainz"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="kontakt">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <span class="footer__brand">BENJAMIN</span>
+        <p>Familienatelier für Trauringe und individuelle Goldschmiedearbeiten in der Mainzer Altstadt — seit 2008.</p>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <p><a href="https://www.google.com/maps/place/Trauringe+Benjamin/@50.0017034,8.2665078,17z" target="_blank" rel="noreferrer">Lotharstr. 15<br/>55116 Mainz</a></p>
+        <p><a href="tel:+4961311438233">06131 / 143 82 33</a></p>
+        <p><a href="mailto:info@juwelier-benjamin.eu">info@juwelier-benjamin.eu</a></p>
+      </div>
+      <div>
+        <h4>Atelier</h4>
+        <p>Mo–Fr 10:00 – 18:00<br/>Sa 10:00 – 16:00<br/>So geschlossen</p>
+        <p style="margin-top:14px"><a href="https://www.juwelier-benjamin.eu/trauringkonfigurator/" target="_blank" rel="noreferrer">Trauring-Konfigurator</a><br/><a href="https://www.instagram.com/juwelierbenjamin/" target="_blank" rel="noreferrer">Instagram @juwelierbenjamin</a></p>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>© 2026 Juwelier Benjamin · Mainz</span>
+      <span>Familienbetrieb seit 2008 · 4.7★</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, {threshold: .14});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>
