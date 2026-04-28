@@ -394,6 +394,56 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
   </div>
 </section>
 
+<!-- BUILDSCROLL:START -->
+<section class="scroll-anim" id="scroll-anim" aria-label="Trauring rotiert beim Scrollen">
+  <div class="scroll-anim__sticky">
+    <div class="scroll-anim__caption">
+      <span class="overline">Atelier · Roségold 750</span>
+      <h3 class="serif">Jeder Ring zeigt sich von allen <em>Seiten</em>.</h3>
+    </div>
+    <img class="scroll-anim__frame" src="assets/scroll/frames-clean/frame-001.webp" alt="Roségold Trauring rotiert" decoding="async" />
+  </div>
+  <div class="scroll-anim__spacer" aria-hidden="true"></div>
+</section>
+<style>
+.scroll-anim{position:relative;background:var(--bg-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.scroll-anim::before{content:"";position:absolute;inset:0;background-image:url(assets/texture.webp);background-size:cover;background-position:center;opacity:.06;mix-blend-mode:overlay;pointer-events:none}
+.scroll-anim__spacer{height:280vh;pointer-events:none}
+.scroll-anim__sticky{position:sticky;top:0;height:100vh;display:grid;place-items:center;z-index:1}
+.scroll-anim__caption{position:absolute;left:8%;top:50%;transform:translateY(-50%);max-width:340px;z-index:2}
+.scroll-anim__caption h3{font-size:clamp(28px,3.4vw,46px);margin-top:18px;color:var(--cream)}
+.scroll-anim__caption h3 em{font-style:italic;color:var(--accent-light);font-family:'Italiana',serif}
+.scroll-anim__frame{max-width:min(70vw,720px);max-height:80vh;width:auto;height:auto;object-fit:contain;will-change:contents;filter:drop-shadow(0 30px 80px rgba(196,154,95,.18)) drop-shadow(0 10px 30px rgba(0,0,0,.5));position:relative;z-index:1}
+@media (max-width:900px){.scroll-anim__caption{position:relative;left:auto;top:auto;transform:none;max-width:none;text-align:center;padding:0 6vw 30px}.scroll-anim__sticky{flex-direction:column;align-content:center;gap:10px;display:flex;justify-content:center}.scroll-anim__spacer{height:220vh}.scroll-anim__frame{max-width:80vw;max-height:60vh}}
+@media (prefers-reduced-motion:reduce){.scroll-anim__spacer{height:auto;min-height:60vh}}
+</style>
+<script>
+(() => {
+  const FRAME_COUNT = 50;
+  const PAD = (n) => String(n).padStart(3,'0');
+  const SRC = (i) => `assets/scroll/frames-clean/frame-${PAD(i+1)}.webp`;
+  const section = document.getElementById('scroll-anim');
+  if (!section) return;
+  const img = section.querySelector('.scroll-anim__frame');
+  for (let i = 0; i < FRAME_COUNT; i++) { const im = new Image(); im.src = SRC(i); }
+  let current = 0, raf = 0;
+  function update(){
+    const rect = section.getBoundingClientRect();
+    const total = section.offsetHeight - window.innerHeight;
+    if (total <= 0) return;
+    const progress = Math.min(1, Math.max(0, -rect.top / total));
+    const idx = Math.min(FRAME_COUNT - 1, Math.floor(progress * FRAME_COUNT));
+    if (idx !== current){ current = idx; img.src = SRC(idx); }
+  }
+  window.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => { update(); raf = 0; });
+  }, { passive: true });
+  update();
+})();
+</script>
+<!-- BUILDSCROLL:END -->
+
 <section class="atelier" id="atelier">
   <div class="container">
     <div class="atelier__grid">

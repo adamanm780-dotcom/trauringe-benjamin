@@ -1,6 +1,8 @@
 node_modules/
 *.json
 !package.json
+package.json
+package-lock.json
 hero-raw.png
 hero-4k.png
 maps-*.png
