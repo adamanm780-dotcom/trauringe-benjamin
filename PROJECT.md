@@ -35,3 +35,4 @@
 ## Updates
 - 2026-04-28: Initial Build
 - 2026-04-28: Scroll-Frame-Animation eingebaut (50 Frames, Seedance 2.0 Video + 851-labs Background-Remover; Roségold-Trauring rotiert beim Scrollen)
+- 2026-04-28: Sticky-Scroll fix — `body{overflow-x:clip}` + `.scroll-anim{padding:0}`, damit `position:sticky` greift und die Animation den Viewport festhält bis alle 50 Frames durchgelaufen sind
