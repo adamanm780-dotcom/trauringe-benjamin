@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preload" as="image" href="assets/hero.webp" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Italiana&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
@@ -52,11 +55,18 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
 .header .nav{display:flex;gap:34px}
 .header .nav.left{justify-content:flex-end}
 .header .nav.right{justify-content:flex-start}
-.brand{font-family:'Italiana',serif;font-size:26px;letter-spacing:.18em;color:var(--ivory);text-decoration:none;text-align:center}
-.brand span{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.5em;color:var(--accent);margin-top:4px;font-weight:400}
+.brand{display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;text-align:center;color:var(--ivory)}
+.brand__logo{display:block;height:38px;width:auto;max-width:230px;object-fit:contain;filter:drop-shadow(0 1px 0 rgba(0,0,0,.25))}
+.brand span{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.5em;color:var(--accent);font-weight:400}
 .icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;color:var(--ivory);text-decoration:none;transition:all .3s;background:rgba(196,154,95,.04)}
 .icon-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(196,154,95,.1)}
-@media(max-width:900px){.header .nav{display:none}.header .container{grid-template-columns:auto 1fr auto}.brand{font-size:20px;text-align:left}.icon-btn{width:36px;height:36px}}
+@media(max-width:900px){.header .nav{display:none}.header .container{grid-template-columns:auto 1fr auto}.brand{align-items:flex-start;text-align:left}.brand__logo{height:30px;max-width:170px}.icon-btn{width:36px;height:36px}}
+.brand-seal{display:flex;flex-direction:column;align-items:center;gap:18px;padding:0 0 90px;text-align:center}
+.brand-seal__logo{display:block;height:78px;width:auto;max-width:min(420px,72vw);object-fit:contain;opacity:.92;filter:drop-shadow(0 4px 14px rgba(0,0,0,.35))}
+.brand-seal__line{display:flex;align-items:center;gap:14px;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--accent)}
+.brand-seal__line::before,.brand-seal__line::after{content:"";display:inline-block;width:48px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+@media(max-width:768px){.brand-seal{padding-bottom:60px}.brand-seal__logo{height:54px}}
+.footer__brand-logo{display:block;height:46px;width:auto;max-width:240px;margin-bottom:22px;object-fit:contain}
 
 /* Hero */
 .hero{position:relative;height:90vh;min-height:640px;max-height:1000px;overflow:hidden;background:var(--bg-deep)}
@@ -276,7 +286,13 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
       <a href="#atelier">Atelier</a>
       <a href="#trauringe">Trauringe</a>
     </nav>
-    <a href="#" class="brand">BENJAMIN<span>Trauringe · Mainz</span></a>
+    <a href="#" class="brand" aria-label="Juwelier Benjamin · Trauringe · Mainz">
+      <picture>
+        <source srcset="assets/logo-cream-600.webp 1x, assets/logo-cream-1600.webp 2x" type="image/webp" />
+        <img class="brand__logo" src="assets/logo-cream-600.webp" alt="Juwelier Benjamin" width="600" height="84" />
+      </picture>
+      <span>Trauringe · Mainz</span>
+    </a>
     <nav class="nav right">
       <a href="#besuch">Besuchen</a>
       <a href="#kontakt">Kontakt</a>
@@ -549,6 +565,13 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
 
 <section class="visit" id="besuch">
   <div class="container">
+    <div class="brand-seal reveal" aria-hidden="true">
+      <picture>
+        <source srcset="assets/logo-cream-600.webp 1x, assets/logo-cream-1600.webp 2x" type="image/webp" />
+        <img class="brand-seal__logo" src="assets/logo-cream-600.webp" alt="" width="600" height="84" loading="lazy" />
+      </picture>
+      <div class="brand-seal__line">Goldschmiede · Mainz · seit 2008</div>
+    </div>
     <div class="visit__grid">
       <div class="visit__text reveal">
         <div class="gold-line">Besuch im Atelier</div>
@@ -584,7 +607,10 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--i
   <div class="container">
     <div class="footer__grid">
       <div>
-        <span class="footer__brand">BENJAMIN</span>
+        <picture>
+          <source srcset="assets/logo-cream-600.webp 1x, assets/logo-cream-1600.webp 2x" type="image/webp" />
+          <img class="footer__brand-logo" src="assets/logo-cream-600.webp" alt="Juwelier Benjamin" width="600" height="84" loading="lazy" />
+        </picture>
         <p>Familienatelier für Trauringe und individuelle Goldschmiedearbeiten in der Mainzer Altstadt — seit 2008.</p>
       </div>
       <div>

@@ -27,6 +27,7 @@
 - Insta-Posts: n/a (skip — Konsistenz besser mit generierter Bildwelt)
 - Zusatz-Assets: assets/about.webp (Goldschmied-Hände mit Pinzette+Diamant), assets/detail-01.webp (Roségold Memoire auf Cream-Seide), assets/detail-02.webp (Trauringpaar dunkler Marmor), assets/texture.webp (warmer Marmor-Overlay)
 - Scroll-Frames: 50 × WebP (assets/scroll/frames-clean/, ~1.5MB total), Source-Video assets/scroll/source.mp4 (Seedance 2.0, 5s, 720p, Roségold-Trauring rotiert + Kamera-Push-In)
+- Logo: assets/logo.webp + logo.png (12165×1706, transparent, schwarz) · logo-cream-{600,1600}.webp (cream-getönt #F4ECDC für dunkle BGs) · favicon-{32,512}.png + apple-touch-icon.png (gold #C49A5F getönt). Quelle: juwelier-benjamin.eu/wp-content/uploads/2018/08/Logo.png, Hintergrund via sharp-Alpha-Extraktion entfernt (pixel-perfekt, keine AI-Regenerierung um Brand-Mark zu schützen)
 
 ## Build-Stats
 - Build-Zeit: ca. 12m
@@ -37,3 +38,4 @@
 - 2026-04-28: Scroll-Frame-Animation eingebaut (50 Frames, Seedance 2.0 Video + 851-labs Background-Remover; Roségold-Trauring rotiert beim Scrollen)
 - 2026-04-28: Sticky-Scroll fix — `body{overflow-x:clip}` + `.scroll-anim{padding:0}`, damit `position:sticky` greift und die Animation den Viewport festhält bis alle 50 Frames durchgelaufen sind
 - 2026-04-28: Mobile-Optimierung — Bento (Kollektionen), Featured, Detail-Grid und Reviews werden auf Smartphones (≤768px) zu horizontalen Swipe-Carousels mit Scroll-Snap; 80%-breite Cards mit angeschnittenem Next-Card-Peek + dezenter „Wischen"-Hinweis
+- 2026-04-28: Echtes Brand-Logo integriert (juwelier BENJAMIN mit Diamant-Mark) — als cream-getöntes Bild im Sticky-Header (statt Italiana-Wortmarke), als Brand-Seal vor der Visit-Section und im Footer; Favicon + Apple-Touch-Icon in Gold-Akzent. Logo aus juwelier-benjamin.eu in 12K-Auflösung gezogen, Hintergrund via sharp-Alpha-Channel transparent gemacht (pixel-perfekt, keine AI-Regenerierung)
